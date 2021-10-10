@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --pale-blue-color: hsl(225, 100%, 94%);
+  --bright-blue-color: hsl(245, 75%, 52%);
+  --bright-light-blue-color: hsl(245, 75%, 66%);
+  --very-pale-blue-color: hsl(225, 100%, 98%);
+  --desaturated-blue-color: hsl(224, 23%, 55%);
+  --dark-blue-color: hsl(223, 47%, 23%);
+  --text-base: 1rem;
+  --text-lg: 1.5rem;
+  --text-sm: 0.85rem;
+  --text-xm: 0.75rem;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue-color);
+
+  @media (min-width > 1440px) {
+    background-image: url('./images/pattern-background-desktop.svg');
+  }
+}
+
+.card {
+  height: 37.5rem;
+  width: 25rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 1.5rem #becefc;
+}
+
+.card__header {
+  height: 40%;
+  background-repeat: no-repeat;
+  background-image: url('./images/illustration-hero.svg');
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card__content {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.card__title {
+  font-size: var(--text-lg);
+  font-weight: 900;
+  margin: 1rem 0;
+  color: var(--dark-blue-color);
+}
+
+.card__text {
+  font-size: var(--text-sm);
+  text-align: center;
+  font-weight: 500;
+  color: var(--desaturated-blue-color);
+  margin-bottom: 1rem;
+}
+
+.card__plan {
+  width: 100%;
+  margin: 0 8%;
+  padding: 4% 0;
+  border-radius: 0.5rem;
+  background-color: var(--very-pale-blue-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.card__plan__img {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card__plan__text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.card__plan__title {
+  font-size: var(--text-sm);
+  font-weight: 900;
+  color: var(--dark-blue-color);
+  margin-bottom: 0.2rem;
+}
+
+.card__plan__value {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--desaturated-blue-color);
+}
+
+.card__plan__link {
+  font-size: var(--text-xm);
+  color: var(--bright-blue-color);
+  font-weight: 900;
+}
+
+.card__plan__link:hover {
+  text-decoration: none;
+  color: var(--bright-light-blue-color);
+}
+
+.card__button-pay {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  border: var(--bright-blue-color) solid 0.1rem;
+  box-shadow: 0 0.05rem 0.3rem var(--bright-blue-color);
+  background-color: var(--bright-blue-color);
+  color: white;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.card__button-pay:hover {
+  background-color: var(--bright-light-blue-color);
+  box-shadow: 0 0.1rem 0.5rem var(--bright-blue-color);
+  border: none;
+}
+
+.card__button-cancel {
+  width: auto;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: transparent;
+  /* box-shadow: 0 0.5rem 10rem var(--bright-blue-color); */
+  color: var(--desaturated-blue-color);
+  font-weight: 900;
+}
+
+.card__button-cancel:hover { 
+  color: var(--dark-blue-color);
+}
+
+input {
+  cursor: pointer;
+}
